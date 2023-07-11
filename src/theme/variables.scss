@@ -5,6 +5,10 @@
 
 :root {
   /** primary **/
+  --color-primario:#36abe0;
+  --bg-primario:#08615ca8;
+  --tama: 50px;
+
   --ion-color-primary: #3880ff;
   --ion-color-primary-rgb: 56, 128, 255;
   --ion-color-primary-contrast: #ffffff;
@@ -84,6 +88,8 @@
    */
 
   body {
+
+
     --ion-color-primary: #428cff;
     --ion-color-primary-rgb: 66,140,255;
     --ion-color-primary-contrast: #ffffff;

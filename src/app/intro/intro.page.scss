@@ -1,10 +1,11 @@
 .slide-icon {
-    font-size: 25px;
-    color: #A452FA;
+    font-size: 50px;
+    color: #52b7fa80;
   }
   .my-favorite-text-color {
-    color: var(--my-favorite-color);
+    color: var(--color-primario);
   }
+ 
 
   img{
     width: 300px;
@@ -13,14 +14,18 @@
   h1{
     color: var(--ion-color-primary);
     font-family: 'Courier New', Courier, monospace;
+    color: var(--color-primario);
+    font-size : var(--tama);
   }
   
   p{
     font-size: var(--my-favorite-font-size);
+    color: var(--color-primario);
+
   }
   
   ion-content{
-    --background:rgba(0, 217, 255, 0.578);
+    --background:rgba(0, 174, 255, 0.685);
   
   }
 
