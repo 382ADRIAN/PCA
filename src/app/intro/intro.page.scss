@@ -1,6 +1,6 @@
 .slide-icon {
     font-size: 50px;
-    color: #52b7fa80;
+    color: #fa665280;
   }
   .my-favorite-text-color {
     color: var(--color-primario);
@@ -10,12 +10,22 @@
   img{
     width: 300px;
   }
-  
-  h1{
-    color: var(--ion-color-primary);
+
+  ion-card{
+
+    color: var(--color-segundario);
     font-family: 'Courier New', Courier, monospace;
     color: var(--color-primario);
+
+    --background:rgba(1, 3, 131, 0.452);
+  }
+
+  h1{
+    color: var(--ion-color-primary);
+    font-family: '--color-segundario', Courier, monospace;
+    color: var(--color-primario);
     font-size : var(--tama);
+   color: var();
   }
   
   p{
@@ -25,7 +35,7 @@
   }
   
   ion-content{
-    --background:rgba(0, 174, 255, 0.685);
+    --background:rgba(0, 204, 255, 0.452);
   
   }
 
