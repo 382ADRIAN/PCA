@@ -1,12 +1,11 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 import { IonicModule } from '@ionic/angular';
-
 import { LoginPageRoutingModule } from './login-routing.module';
-
 import { LoginPage } from './login.page';
+
+
 
 @NgModule({
   imports: [
@@ -16,6 +15,7 @@ import { LoginPage } from './login.page';
     ReactiveFormsModule,
     LoginPageRoutingModule
   ],
-  declarations: [LoginPage]
+  declarations: [LoginPage],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class LoginPageModule {}
+export class LoginPageModule { }

@@ -10,34 +10,34 @@ export class IntroPage implements OnInit {
 
   slides = [
     {
-      title:"Perro",
-      img: "assets/image/perro.webp",
-      icon: "beer-outline",
-      description: "esta raza de perro son demasiado activo,cariñoso y muy obediente etc"
+      title:"Avril lavgine",
+      img: "../../assets/image/evril-removebg-preview.png",
+      icon: "arrow-down",
+      description: "Es una cantante, compositora, diseñadora de moda y actriz canadiense. Algunos medios de comunicación y críticos se refieren a ella como la princesa del pop punk."
     },
     {
-      title:"Gato",
-      img: "assets/image/gato.webp",
+      title:"Green day",
+      img: "../../assets/image/green_day-removebg-preview.png",
       icon: "barbell-outline",
-      description: "esta raza de gato son muy casadores"
+      description: "es una banda estadounidense de punk rock integrada por Billie Joe Armstrong (guitarra y voz), Mike Dirnt (bajo y coros) y Tré Cool (batería y coros)"
     },
     {
-      title:"buho",
-      img: "assets/image/buho.jpg",
+      title:"Paramore",
+      img: "../../assets/image/paramore-removebg-preview.png",
       icon: "barbell-outline",
-      description: "esta ave es nocturna, buena casadoras"
+      description: "Paramore es una banda de rock estadounidense de Franklin, Tennessee , formada en 2004. Actualmente, la banda está formada por la vocalista principal Hayley Williams , "
     }, 
     {
-      title:"elefante",
-      img: "assets/image/elefante.jpg",
+      title:"30 Segund to mars",
+      img: "../../assets/image/30segund-removebg-preview.png",
       icon: "barbell-outline",
-      description: "este tipo de animales son super protectores con la crias"
+      description: " es una banda de rock estadounidense de Los Ángeles, California, formada en 1998. La banda está formada por los hermanos Jared Leto (voz principal, guitarra, bajo, teclados) y Shannon Leto (batería, percusión)."
     },
      {
-      title:"tigre",
-      img: "assets/image/tigre.avif",
+      title:"rihana",
+      img: "../../assets/image/rihana-removebg-preview.png",
       icon: "barbell-outline",
-      description: "esta raza de gaton son muy casadores"
+      description: "Rihanna, es una cantante, actriz, diseñadora y empresaria barbadense. Es conocida por fusionar algunos géneros caribeños con música pop y por reinventar su imagen a través de los años. "
     }
   ]
   
@@ -49,8 +49,9 @@ export class IntroPage implements OnInit {
 
   finish(){
     this.storage.set("introShow", true);
-    this.router.navigateByUrl("/home");
-
+    // this.router.navigateByUrl("/home");
+    this.router.navigateByUrl("/menu/home")
+    console.log("salir")
 
 }
 }

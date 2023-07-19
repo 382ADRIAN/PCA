@@ -5,11 +5,15 @@
 
 :root {
   /** primary **/
-  --color-terciario:#08615ca8;
-  --color-segundario:#08615ca8;
-  --color-primario:#020f0fa8;
-  --bg-primario:#08615ca8;
-  --tama: 50px;
+ 
+  --background: url("https://i.pinimg.com/originals/6b/c3/ed/6bc3edb5da1181a643fdf227b6f921b1.jpg");
+  --bordes:10px;
+  --color-cuarto:#f0f3f1;
+  --color-terciario:#0c0e0d;
+  --color-segundario:#090e0e;
+  --color-primario:#f5f4f4;
+  --bg-primario:#f8f8f8f6;
+  --tama: 40px;
 
   --ion-color-primary: #3880ff;
   --ion-color-primary-rgb: 56, 128, 255;

@@ -11,24 +11,28 @@
 
     <swiper-slide *ngFor="let slide of slides">
       <h1 class="my-favorite-text-color">{{slide.title}}</h1>
-      <img src="{{slide.img}}"/>
+      <img src="{{slide.img}}"/> <br>
       <ion-icon name="slide-icon" name="{{slide.icon}}"></ion-icon>
       <p>"{{slide.description}}"</p>
       <ion-card>
         <ion-item>
+          
           <ion-avatar slot="start">
             <img alt="" src="https://i.pinimg.com/736x/49/c8/e4/49c8e403cd1929e9e7b02126824ff831.jpg" />
           </ion-avatar>
-          <ion-label>usuario</ion-label>
-          <h3>reseña</h3><br>
+          <ion-label ><h3>noticias</h3></ion-label><br>
+          <h3 class="reseña">reseña</h3><br>
         </ion-item>
         <ion-card-header>
-          <ion-card-title>eleccion de raza</ion-card-title>
+          <h2>Artista dominado en Music Awards</h2>
+      
           
         </ion-card-header>
       
         <ion-card-content>
-         cada raza en particular tiene sus tipo de familia que le brinda mucho amor donde cada animalito se sienta muy querido
+          <p>
+            Cada artista ha sido seleccionado como unos de los mejores durante el año 2023, como de la mejores vos,interpretacion e integracion de cada una de la bandas  
+          </p>
          
         </ion-card-content>
       </ion-card>
