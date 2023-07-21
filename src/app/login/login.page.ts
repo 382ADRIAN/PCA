@@ -7,7 +7,6 @@ import { BackgroundMode } from '@awesome-cordova-plugins/background-mode/ngx';
 
 
 @Component({
-  
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
@@ -32,10 +31,8 @@ export class LoginPage implements OnInit {
     private storage:Storage,
 
 
-  ) {
-  
+    ) {
     this.loginForm = this.formBuilder.group(
-      
       {
         email: new FormControl(
           "",
@@ -48,12 +45,10 @@ export class LoginPage implements OnInit {
         ),
         password: new FormControl(
           "",
-
           Validators.compose(
             [
               Validators.required,
               Validators.minLength(6)
-
             ]
           )
         )
@@ -83,14 +78,9 @@ export class LoginPage implements OnInit {
     }).catch(err => {
       this.errorMessage = err;
       console.log(this.errorMessage);
-
-
     })
 
   }goToregister(){
   this.navCtrl.navigateForward("/register")
 }
 }
-
-
-

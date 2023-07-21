@@ -10,9 +10,7 @@
     <ion-item>
       <ion-input label="Email 📧" labelPlacement="floating" placeholder="name@example.com"
         formControlName="email"></ion-input>
-
     </ion-item>
-
 
     <div class="validation-erros">
       <ng-container *ngFor="let validation of validation_messages.email">
@@ -27,9 +25,9 @@
     </div>
 
     <ion-item>
-      <ion-input type="password" label="Contraseña 🔑" labelPlacement="floating" placeholder="**"
+      <ion-input type="password" label="Contraseña 🔑" labelPlacement="floating" placeholder="*****"
         formControlName="password"></ion-input>
-      <ion-icon name="eye" color="gray" item-end></ion-icon>
+        <ion-icon name="eye" color="gray" item-end></ion-icon>
     </ion-item>
     <ion-button expand="full" shape="round" color="secondary" [disabled]="!loginForm.valid" type="submit">
 
@@ -37,7 +35,5 @@
 
 
     </ion-button>
-  
-
   </form>
 </ion-content>
