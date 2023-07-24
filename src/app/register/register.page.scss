@@ -1,5 +1,51 @@
 ion-content {
-    --background: url("https://i.pinimg.com/originals/6c/4c/ea/6c4cea8f06fc8c679e0ab10d8811d72a.gif");
+    --background: url("../../assets/image/dibujo.avif");
    
-  
+    background-color: rgba(4, 156, 156, 0.445);
   }
+ 
+
+ion-header {
+  --background: transparent; 
+}
+
+
+ion-toolbar {
+  --background: #0e87b765; 
+  color: #0b0a0a; 
+  text-align: center;
+
+}
+
+
+ion-title {
+  font-size: 24px; 
+}
+
+
+form {
+  padding: 20px;
+}
+
+ion-item {
+  --padding-top: 15px; 
+  --padding-bottom: 15px; 
+}
+
+
+ion-button.registro {
+  margin-top: 30px;
+  background-color: #0056b3; 
+  --background-activated: #003c80; 
+  color: #0c0505; 
+  font-weight: bold;
+  text-transform: uppercase;
+text-align: center;
+}
+.validation-erros{
+  
+  color: rgb(8, 12, 11); 
+  font-size: 20px; 
+  margin-top: 7px; 
+}
+

@@ -1,12 +1,15 @@
 <ion-header>
-  <ion-toolbar color="success">
+  <ion-toolbar color="color">
 
-    <ion-title>Login app ✔ <img class="logo" src="../../assets/image/logo-removebg-preview.png" alt=""  ></ion-title>
+    <ion-title>Login app ✔ <img class="logo" src="../../assets/image/logo-removebg-preview.png" alt=""></ion-title>
+
+
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="transparent-background">
   <form [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm.value)">
+
     <ion-item>
       <ion-input label="Email 📧" labelPlacement="floating" placeholder="name@example.com"
         formControlName="email"></ion-input>
@@ -15,9 +18,9 @@
     <div class="validation-erros">
       <ng-container *ngFor="let validation of validation_messages.email">
         <div *ngIf="(
-        loginForm.get('email')?.hasError(validation.type) && 
-        loginForm.get('email')?.dirty) 
-      ">
+          loginForm.get('email')?.hasError(validation.type) && 
+          loginForm.get('email')?.dirty) 
+        ">
           {{validation.message}}
         </div>
 
@@ -25,10 +28,28 @@
     </div>
 
     <ion-item>
-      <ion-input type="password" label="Contraseña 🔑" labelPlacement="floating" placeholder="*****"
-        formControlName="password"></ion-input>
-        <ion-icon name="eye" color="gray" item-end></ion-icon>
+      <ion-input type="{{ showPassword ? 'text' : 'password' }}" label="Contraseña 🔑" labelPlacement="floating"
+        placeholder="*****" formControlName="password"></ion-input>
+      <ion-icon (click)="togglePasswordVisibility()" name="{{ showPassword ? 'eye-off' : 'eye' }}" color="gray"
+        item-end></ion-icon>
     </ion-item>
+    <div class="validation-erros">
+      <ng-container *ngFor="let validation of validation_messagespassword.password">
+        <div *ngIf="(
+        loginForm.get('password')?.hasError(validation.type)
+        && 
+        loginForm.get('password')?.dirty) 
+      ">
+          {{validation.message}}
+          
+        </div>
+
+      </ng-container>
+    </div>
+
+   
+
+
     <ion-button expand="full" shape="round" color="secondary" [disabled]="!loginForm.valid" type="submit">
 
       ingresar
@@ -36,4 +57,9 @@
 
     </ion-button>
   </form>
+  <ion-footer>
+    <ion-button expand="full" shape="round" color="secondary" (click)="goToRegister()">
+      Registrate
+    </ion-button>
+  </ion-footer>
 </ion-content>

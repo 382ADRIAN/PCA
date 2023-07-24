@@ -1,13 +1,41 @@
-ion-avatar{
+ion-avatar {
     height: 100px;
     width: 100px;
 }
 
-swiper-slide{
+swiper-slide {
     height: 120px;
 }
+
 ion-content {
     --background: url("../../assets/image/fondo.jpg");
-  
-  
+
+    h1 {
+        color: aliceblue;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+    h3{
+        text-align: center;
+    }
+
+
+
+}
+
+* {
+    color: rgb(245, 247, 245);
+    font-family: Arial, ;
+ 
+}
+/* Estilos en hoja de estilos externa */
+.color {
+    color: #eff2f5;
+    text-align: center;
   }
+  
+  ion-header {
+    background-color: #125cb062;
+  }
+  
+  

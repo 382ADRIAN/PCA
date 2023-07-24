@@ -1,0 +1,85 @@
+ion-content {
+  --background: url("../../assets/image/holis.gif");
+  background-position: center;
+}
+
+.transparent-background {
+
+
+  background-color: transparent;
+}
+
+.stat {
+  color: rgb(244, 247, 249);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+}
+
+.stat-label {
+  color: rgb(242, 234, 234);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+
+
+ion-buttons[slot="end"] {
+  margin-right: 16px;
+}
+
+
+ion-avatar {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+
+ion-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+h1.ion-text-center,
+h2.ion-text-center {
+  margin-top: 20px;
+  color: #f5f3f3;
+}
+
+
+ion-grid {
+  margin-top: 20px;
+  padding: 0 16px;
+}
+
+
+ion-row {
+  border-bottom: 2px solid #890505;
+  padding: 8px 0;
+}
+
+/* Styling for the ion-col */
+ion-col {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Styling for the first ion-row (header row) */
+ion-row.row-header {
+  border-bottom: 2px solid #890505;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Centering the ion-avatar */
+.center-avatar {
+  display: flex;
+  justify-content: center;
+}

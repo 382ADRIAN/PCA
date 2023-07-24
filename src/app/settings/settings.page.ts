@@ -1,24 +1,33 @@
 import { Component, OnInit } from '@angular/core';
-import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { Camera, CameraResultType, CameraSource, Photo } from '@capacitor/camera';
+import { UserService } from '../services/user.service';
+
 @Component({
   selector: 'app-settings',
   templateUrl: './settings.page.html',
   styleUrls: ['./settings.page.scss'],
 })
 export class SettingsPage implements OnInit {
-  userImage = "aasets/image/";
-  constructor() { }
+  userImage = "assets/images/profile.jpeg";
+  photo: any;
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
+    this.userService.getUser(1).then(userData => {
+      //TODO
+    })
   }
-  async takePhoto() {
+
+  async takePhoto(){
     const image = await Camera.getPhoto({
       quality: 100,
       allowEditing: false,
-      resultType: CameraResultType.Base64,
+      resultType: CameraResultType.DataUrl,
       source: CameraSource.Camera
     });
-    console.log(image)
+    this.photo = image.dataUrl;
+    console.log(image.dataUrl)
   }
 
 }

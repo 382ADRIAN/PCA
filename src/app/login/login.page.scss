@@ -8,9 +8,33 @@
   margin: auto;
 
 }
+.transparent-background {
+
+
+  background-color: transparent;
+}
 
 
 ion-content {
-  --background: url("https://i.pinimg.com/originals/6c/4c/ea/6c4cea8f06fc8c679e0ab10d8811d72a.gif");
-
+  --background: url("../../assets/image/fondoss.jpg");
+  
 }
+.validation-erros{
+  
+  color: rgb(7, 233, 203); /* Color del texto del mensaje de error */
+  font-size: 12px; /* Tamaño de fuente del mensaje de error */
+  margin-top: 5px; /* Espaciado superior del mensaje de error */
+}/* Estilos personalizados para el toast */
+.custom-toast {
+  --background: #007bff; /* Cambia el color de fondo del toast a azul (#007bff) */
+  color: #ffffff; /* Cambia el color del texto del toast a blanco */
+}
+
+
+
+
+
+
+
+
+

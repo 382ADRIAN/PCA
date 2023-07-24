@@ -10,28 +10,46 @@ import { BackgroundMode } from '@awesome-cordova-plugins/background-mode/ngx';
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
+
 })
+
 export class LoginPage implements OnInit {
- passwordType:string='password';
- passwordShown:boolean=false;
- 
+  showPassword = false;
+  passwordType: string = 'password';
+  passwordShown: boolean = false;
+
   loginForm: FormGroup;
   validation_messages = {
     email: [
       { type: "required", message: "El email es obligatio" },
       { type: "pattern", message: "Debe poner un email valido" }
     ]
+    
+    
+
   }
-  errorMessage: String = '';
-  
+  validation_messagespassword = {
+    password: [
+      { type: "required", message: "La contraseña es obligatoria" },
+      { type: "pattern", message: "Contraseña no valida" }
+    ]
+  }
+ 
+
+  errorMessage: string = '';
+
   constructor(
     private formBuilder: FormBuilder,
     private authService: AuthenticateService,
     private navCtrl: NavController,
-    private storage:Storage,
+    private storage: Storage
 
 
-    ) {
+  ) {
+    this.loginForm = this.formBuilder.group({
+      email: ['', Validators.compose([Validators.required, Validators.email])],
+      password: ['', Validators.required],
+    });
     this.loginForm = this.formBuilder.group(
       {
         email: new FormControl(
@@ -48,20 +66,25 @@ export class LoginPage implements OnInit {
           Validators.compose(
             [
               Validators.required,
-              Validators.minLength(6)
+              Validators.minLength(6),
+              
             ]
           )
         )
       }
     )
   }
-  public togglepassword(){
-    if(this.passwordShown){
-      this.passwordShown=false;
-      this.passwordType='password'
-    }else{
-      this.passwordShown=true;
-      this.passwordType='text'
+  
+  togglePasswordVisibility() {
+    this.showPassword = !this.showPassword;
+  }
+  public togglepassword(): void {
+    if (this.passwordShown) {
+      this.passwordShown = false;
+      this.passwordType = 'password'
+    } else {
+      this.passwordShown = true;
+      this.passwordType = 'text'
     }
 
   }
@@ -69,18 +92,21 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
   }
+
   loginUser(credentials: any) {
     console.log(credentials);
     this.authService.loginUser(credentials).then(res => {
       this.errorMessage = "";
-      this.storage.set("isUserLoggedIn",true);
+      this.storage.set("isUserLoggedIn", true);
       this.navCtrl.navigateForward("/menu/home");
     }).catch(err => {
       this.errorMessage = err;
       console.log(this.errorMessage);
     })
+  }
 
-  }goToregister(){
-  this.navCtrl.navigateForward("/register")
-}
+  goToRegister() {
+    this.navCtrl.navigateForward("/register")
+  }
+
 }

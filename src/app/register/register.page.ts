@@ -55,15 +55,50 @@ export class RegisterPage implements OnInit {
         )
       }
     )
+   } 
+   validation_messages = {
+     email: [
+       { type: "required", message: "El email es obligatio" },
+       { type: "pattern", message: "Debe poner un email valido" }
+     ]
+     
+     
+ 
    }
+   validation_messagespassword = {
+    password: [
+      { type: "required", message: "La contraseña es obligatoria" },
+      { type: "pattern", message: "Contraseña no valida" }
+    ]
+    
+    
+
+  }
+  validation_messagesname = {
+    name: [
+      { type: "required", message: "El nombre es obligatorio" },
+      { type: "pattern", message: "Nombre no valida" }
+    ]
+    
+    
+
+  }
+  validation_messageslast_name = {
+    last_name: [
+      { type: "required", message: "El apellido es obligatorio" },
+      { type: "pattern", message: "Apellido no valida" }
+    ]
+    
+    
+
+  }
 
   ngOnInit() {
   }
-
-  goToLogin(){
-    console.log("Volver atras")
+  goToLogin() {
+    this.navCtrl.navigateBack('/login');
   }
-
+  
   registerUser(userData:any){
     console.log(userData);
     this.authService.registerUser(userData).then(() =>{

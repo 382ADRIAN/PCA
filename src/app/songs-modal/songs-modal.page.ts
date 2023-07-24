@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController, NavParams } from '@ionic/angular';
+import { NavParams, ModalController } from '@ionic/angular';
+
 @Component({
   selector: 'app-songs-modal',
   templateUrl: './songs-modal.page.html',
@@ -7,22 +8,23 @@ import { ModalController, NavParams } from '@ionic/angular';
 })
 export class SongsModalPage implements OnInit {
   songs: any;
-  artist_name: any;
-  
+  data_name: any;
   constructor(
     private navParams: NavParams,
     private modalController: ModalController
-
   ) { }
 
   ngOnInit() {
     this.songs = this.navParams.data['songs'];
-    this.artist_name = this.navParams.data['artist'];
+    this.data_name = this.navParams.data['data_name'];
   }
+
   close(){
     return this.modalController.dismiss();
   }
-  async selectSong(songs:any){
-    await this.modalController.dismiss(songs);
+
+  async selectSong(song:any){
+    await this.modalController.dismiss(song);
   }
+
 }

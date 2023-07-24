@@ -1,17 +1,29 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-menu contentId="content" side="end">
-      <ion-title>settings</ion-title>
+  <ion-toolbar class="settings"> <h3>settings</h3>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">settings</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-avatar (click)="takePhoto()">
-    <img [src]="userImage" />
+<ion-content class="transparent-background">
+  <ion-avatar (click)="takePhoto()" class="center-avatar">
+    <img [src]="userImage" *ngIf="!photo" />
+    <img [src]="photo" *ngIf="photo" />
   </ion-avatar>
+  <h1 class="ion-text-center name">Adrian Caballero</h1>
+  <h2 class="ion-text-center email">Caballeroadrian18@gmail.com</h2>
+  <ion-grid class="stats-grid">
+
+    <ion-row class="align-items-center ion-text-center row-header">
+      <ion-col  class="stat">100</ion-col>
+      <ion-col  class="stat">25</ion-col>
+      <ion-col  class="stat">123</ion-col>
+    </ion-row>
+    <ion-row class="align-items-center ion-text-center">
+      <ion-col class="stat-label">Artistas</ion-col>
+      <ion-col class="stat-label">Seguidores</ion-col>
+      <ion-col class="stat-label">Canciones</ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
