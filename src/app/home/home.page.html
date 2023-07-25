@@ -68,7 +68,7 @@
     </ion-row>
   </ion-grid>
   <ion-progress-bar [value]="newTime"></ion-progress-bar>
-  <ion-grid class="color">
+  <ion-grid>
     <ion-row>
       <ion-col size="1">
       <ion-icon name="heart"></ion-icon>
@@ -78,7 +78,7 @@
         song?.name || "Sin cancion seleccionada"
       }}</ion-text>
     </ion-col>
-    <ion-col class="hola" size="1">
+    <ion-col class="aw" size="1">
       <ion-icon name="play" (click)="play()" *ngIf="!song?.playing"></ion-icon>
       <ion-icon name="pause" (click)="pause()" *ngIf="song?.playing"></ion-icon>
     </ion-col>
