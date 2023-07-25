@@ -1,51 +1,25 @@
 ion-content {
-    --background: url("../../assets/image/dibujo.avif");
-   
-    background-color: rgba(4, 156, 156, 0.445);
-  }
- 
+  --background: url("../../assets/image/dibujo.jpg");
 
-ion-header {
-  --background: transparent; 
+  background-color: rgba(4, 156, 156, 0.445);
 }
 
-
 ion-toolbar {
-  --background: #0e87b765; 
-  color: #0b0a0a; 
+  --background: #0e87b765;
+  color: #0b0a0a;
   text-align: center;
 
 }
-
-
-ion-title {
-  font-size: 24px; 
-}
-
-
-form {
-  padding: 20px;
-}
-
 ion-item {
-  --padding-top: 15px; 
-  --padding-bottom: 15px; 
+  margin-bottom: 15px;
 }
-
-
-ion-button.registro {
-  margin-top: 30px;
-  background-color: #0056b3; 
-  --background-activated: #003c80; 
-  color: #0c0505; 
-  font-weight: bold;
-  text-transform: uppercase;
-text-align: center;
+.validation-erros {
+  color: red;
+  font-size: 20px;
+  margin-top: 5px;
+  font-family: Arial;
 }
-.validation-erros{
-  
-  color: rgb(8, 12, 11); 
-  font-size: 20px; 
-  margin-top: 7px; 
-}
+ ion-input {
+    background-color: transparent; /* Cambia el color a tu preferencia */
+  }
 

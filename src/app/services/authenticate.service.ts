@@ -29,9 +29,9 @@ export class AuthenticateService {
   async showToast(message: string) {
     const toast = await this.toastController.create({
       message: message,
-      duration: 2000, // Duración en milisegundos
+      duration: 2000,
       
-      position: 'bottom' // Posición del toast: 'top', 'middle', 'bottom'
+      position: 'bottom' 
     });
     toast.present();
   }

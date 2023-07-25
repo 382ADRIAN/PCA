@@ -1,5 +1,5 @@
 ion-content {
-  --background: url("../../assets/image/holis.gif");
+  --background: url("../../assets/image/dibujo.jpg");
   background-position: center;
 }
 
@@ -13,6 +13,14 @@ ion-content {
   color: rgb(244, 247, 249);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 25px;
+}
+ion-toolbar {
+  --background: #254e9b65;
+  color: #0b0a0a;
+  text-align: center;
+
+
+
 }
 
 .stat-label {
@@ -45,11 +53,17 @@ ion-avatar img {
   object-fit: cover;
 }
 
+.h3{
+  margin-top: 20px;
+  font-family: Arial;
+  font-size: 20px;
 
+}
 h1.ion-text-center,
 h2.ion-text-center {
   margin-top: 20px;
   color: #f5f3f3;
+  font-family: Arial;
 }
 
 
