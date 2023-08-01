@@ -1,46 +1,95 @@
 .logo {
-  width: 40px;
-  height: 40px;
-  float: right;
-  display: flex;
-  border-radius: 10px;
-  display: block;
-  margin: auto;
+    width: 40px;
+    height: 40px;
+    float: right;
+    display: flex;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
 
 }
+
 .transparent-background {
 
 
-  background-color: transparent;
+    background-color: transparent;
 }
+
 ion-toolbar {
-  --background: #0a5aa18a;
-  color: #0b0a0a;
-  text-align: center;
+    --background: #0a5aa18a;
+    color: #0b0a0a;
+    text-align: center;
 
 }
 
 
 ion-content {
-  --background: url("../../assets/image/dibujo.jpg");
-  
+    --background: url("https://img.freepik.com/foto-gratis/mujer-joven-haciendo-ejercicio-escuchando-auriculares-bailando-generado-ia_188544-16891.jpg")no-repeat center center/cover;
 }
-.validation-erros{
-  
-  color: rgb(2, 68, 48); 
-  font-size: 20px; 
-  margin-top: 5px; 
+
+.validation-erros {
+
+    color: rgb(5, 238, 176);
+    font-size: 15px;
+    margin-top: 5px;
 }
+
 .custom-toast {
-  --background: #0b4d5f; 
-  color: #ffffff; 
+    --background: #0b4d5f;
+    color: #ffffff;
 }
 
+ion-item {
+    --background: transparent;
 
+    ion-label {
+        color: #130c0c;
+        font-weight: bold;
+        font-size: 1.2em;
+        font-family: Arial, Helvetica, sans-serif;
+    }
 
+    ion-input {
+        color: #130c0c;
+        font-size: 1.2em;
+        font-family: Arial;
+    }
+}
 
+ion-row {
+    margin: 6vh;
+    color: #fff7f7;
 
+    ion-label,
+    p {
+        text-align: center;
+        color: #faf7f7;
+        font-size: 1.8rem;
 
+    }
+}
 
+ion-list {
+    transform: translateY(12vh);
+    background: transparent;
 
+    ion-item {
+        color: #f0e6e6;
+        --background: transparent;
+        
 
+        ion-label {
+            color: #e6e0e0;
+            font-weight: bold;
+            font-size: em;
+         
+        }
+
+        ion-input {
+        
+            color: #f0e8e8;
+            font-size: 1.4em;
+        }
+    }
+
+}
